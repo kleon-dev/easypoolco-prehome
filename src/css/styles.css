@@ -1,0 +1,188 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background: linear-gradient(to left, black, rgb(2, 2, 46));
+   background-size: 100% 200vh;
+}
+.container {
+   width: fit-content;
+   height: fit-content;
+}
+#navbar {
+   height: 8svh;
+   z-index: 1000;
+}
+
+.hovera:hover {
+   color: rgb(4, 4, 81);
+}
+
+
+#xbutton {
+   color: black;
+}
+
+#div-of-x {
+   top: calc(10vh + 1vh);
+   left: 1vw;
+}
+.alldiv {
+   margin-top: 8svh;
+
+}
+#divInfo {
+   border-radius: 0 0 30px 30px;
+   height: 70svh;
+   padding-right: 3vw;
+
+}
+
+nav {
+   position: fixed;
+   top: 0;
+   z-index: 100;
+}
+
+.container-text {
+   margin: 10svh 0 0 0;
+}
+
+.typing-first, .typing-second, .typing-third {
+   
+   animation: blink .6s infinite alternate, type 4.5s infinite alternate steps(20);
+   border-right-width: 2px;
+   overflow: hidden;
+   text-wrap: nowrap;
+   width: 100%; 
+   font-size: 2rem;
+   margin-right: 5px;   
+}
+ .typing-third {
+   font-size: 2.2rem;
+   font-weight: 700;
+   font-family: "Open Sans";
+}
+.typing-second {
+   color: rgb(255, 149, 0);
+   font-weight: 600;
+
+}
+
+.button-contact {
+   background: linear-gradient(to right, blue, rgb(0, 149, 255));
+   width: 60vw;
+   border-radius: 50px;
+   height: 8vh;
+   margin-top: 4vh;
+   transition: all 1s ease;
+   
+}
+.button-contact:hover
+{
+   transform: scale(0.9);
+}
+.button-contact:active {
+   transform: scale(0.7);
+   background: linear-gradient(to left, blue, rgb(0, 149, 255));
+}
+@media (min-width: 620px) {
+   #divInfo {
+      height: 8svh;
+   }
+   .do-not-display {
+      display: none;
+   }
+   .hovera:hover {
+      color: rgb(116, 116, 241);
+   }
+   
+   .flex-container-poolLogo {
+      display: none;
+   }
+   .card-container {
+      display: none;
+   }
+   
+   
+}
+@media (max-width: 619px) {
+   #divInfo {
+      padding-right: 0;
+   }
+}
+@keyframes blink {
+   from {
+      border-right-color: transparent;
+   }
+   to {
+      border-right-color: rgb(255, 255, 255);
+   }
+}
+@keyframes type {
+   0% {
+      width: 0;
+   } 50% {
+      width: 100%;
+   } 100% {
+      width: 100%;
+   }
+}
+
+
+.card-container  {
+   height: 90vw;
+   width: 90vw;
+   perspective: 1000px;
+   position: static;
+}
+
+.card {
+   height: 100%;
+   width: 100%;
+   position: relative;
+   transition: transform 1500ms;
+   transform-style: preserve-3d;
+   
+}
+
+.card-container:hover > .card {
+   cursor: pointer;
+   transform: rotateY(180deg);
+}
+.front, 
+.back {
+   height: 100%;
+   width: 100%;
+   border-radius: 2rem;
+   position: absolute;
+   backface-visibility: hidden;
+   color: white;
+   z-index: -10;
+}
+
+.front {
+   width: 90vw;
+   height: 90vw;
+   z-index: -999;
+}
+
+.back {
+   background-color: #202020;
+   transform: rotateY(180deg);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 0 10vw;
+   row-gap: 20px;
+   
+}
+
+.flex-container-poolLogo {
+   height: calc(90vw + 10vh);
+   position: static;
+}

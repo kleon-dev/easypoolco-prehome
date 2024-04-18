@@ -1,0 +1,20 @@
+     <nav class="md:h-14 w-full bg-slate-800 fixed z-0 h-16">
+          <div class="text-white h-full w-10 flex md:hidden items-center absolute right-0 pr-10">
+               <i class="fa fa-bars text-4xl buttonBar z-10 w-full">Bar</i>
+               <input type="checkbox" name="" id="checkbox" hidden>
+          </div>
+          <div class="md:flex pr-10 md:justify-end flex justify-end mt-16 md:mt-0">
+               <div class="
+                    text-white md:text-lg md:flex md:items-center md:w-3/6 md:h-14
+                    md:justify-between md:flex-row flex-col md:bg-transparent bg-blue-800 h-80 w-64 rounded-2xl justify-center items-center
+               divInfo hidden text-3xl space-y-3 md:space-y-0
+               ">
+                    <a href="#"></a>
+                    <a href="#">About</a>
+                    <a href="#">Skills</a>
+                    <a href="#">Card</a>
+                    <a href="#">Projects</a>
+                    <a href="#">Contact</a>
+               </div>
+          </div>
+     </nav>
